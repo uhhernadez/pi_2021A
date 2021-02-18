@@ -1,0 +1,17 @@
+#N canvas 1429 0 1440 705 12;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array array1 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0.957143 0.928571 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.657141 0 0 0.471429 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.942857 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 218 221 graph;
+#X obj 51 181 tabwrite~ array1;
+#X obj 119 131 metro 100;
+#X obj 41 43 inlet~ signal;
+#X obj 118 96 loadbang;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X coords 0 -1 1 1 400 400 1 200 200;
