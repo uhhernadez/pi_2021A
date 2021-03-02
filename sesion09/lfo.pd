@@ -1,0 +1,38 @@
+#N canvas 700 251 1074 623 12;
+#X obj 207 99 osc~;
+#X obj 207 123 +~ 1;
+#X obj 207 147 *~ 0.5;
+#X obj 210 73 hsl 128 15 0.01 200 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 23200 1;
+#X text 247 92 0.01 - 200Hz;
+#X text 204 53 Rate;
+#X obj 367 72 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 25500 1;
+#X text 369 50 Depth;
+#X obj 275 193 *~;
+#X text 380 92 0 - 1;
+#X obj 276 230 +~;
+#X obj 345 188 swap 1;
+#X obj 353 219 -;
+#X obj 51 110 osc~;
+#X obj 51 81 mtof;
+#X obj 152 271 *~;
+#X obj 147 322 dac~;
+#X obj 51 45 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 17100 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 0 0;
+#X connect 6 0 8 1;
+#X connect 6 0 11 0;
+#X connect 8 0 10 0;
+#X connect 10 0 15 1;
+#X connect 11 0 12 0;
+#X connect 11 1 12 1;
+#X connect 12 0 10 1;
+#X connect 13 0 15 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 15 0 16 1;
+#X connect 17 0 14 0;

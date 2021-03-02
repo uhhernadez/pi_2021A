@@ -1,0 +1,4 @@
+#N canvas 498 1 720 428 12;
+#X obj 111 105 volumen~;
+#X obj 110 73 osc~ 440;
+#X connect 1 0 0 0;
