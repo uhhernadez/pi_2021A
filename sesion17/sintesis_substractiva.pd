@@ -1,0 +1,15 @@
+#N canvas 1906 1315 1093 535 12;
+#X obj 115 12 noise~;
+#X obj 121 188 volumen~;
+#X obj 116 58 lop~ 1000;
+#X obj 25 114 volumen~;
+#X obj 119 93 lop~ 500;
+#X obj 295 -33;
+#X obj 230 46 lfo~;
+#X obj 120 140 *~;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 4 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 1 0;

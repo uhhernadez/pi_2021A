@@ -1,4 +1,4 @@
-#N canvas 2132 1108 1231 869 12;
+#N canvas 657 1044 1231 869 12;
 #X obj 99 34 adc~;
 #X obj 104 101 writesf~ 2;
 #X msg 154 11 open microfono.wav;
@@ -14275,7 +14275,7 @@
 -1 -1;
 #X msg 49 282 stop;
 #X obj 318 307 hsl 128 15 400 10000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 25500 1;
+-262144 -1 -1 0 1;
 #X text 321 285 400 10000;
 #X floatatom 335 343 5 0 0 0 - - -;
 #X obj 406 394 grapher~;
