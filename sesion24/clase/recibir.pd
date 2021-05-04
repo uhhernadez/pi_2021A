@@ -1,0 +1,17 @@
+#N canvas 953 0 958 988 12;
+#X obj 82 102 unpackOSC;
+#X obj 82 135 routeOSC /datos/dato;
+#X floatatom 82 170 20 0 0 0 - - -;
+#X obj 83 64 udpreceive 11000;
+#X obj 30 153 print;
+#X obj 82 207 mtof;
+#X obj 82 236 osc~;
+#X obj 82 273 dac~;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 0 7 1;

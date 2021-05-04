@@ -1,0 +1,12 @@
+#N canvas 688 19 1064 712 12;
+#X obj 147 163 udpsend;
+#X obj 240 89 packOSC;
+#X obj 147 204 print;
+#X msg 41 36 connect localhost 10000;
+#X msg 238 44 send /puredata/dato 1;
+#X msg 140 70 disconnect;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;
