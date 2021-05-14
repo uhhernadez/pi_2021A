@@ -1,12 +1,11 @@
 import controlP5.*;
-
 class ControlBang {
-  ControlP5 cp5;
+  ControlP5 control;
   CallbackListener cl;
 
-  ControlBang(PApplet papp) {
-    cp5 = new ControlP5(papp);
-    cp5.addBang("bang")
+  ControlBang(ControlP5 cp5) {
+    control = cp5;
+    control.addBang("bang")
       .setPosition(120, 200)
       .setSize(40, 40)
       .setId(0)
@@ -20,6 +19,6 @@ class ControlBang {
       }
     };
     
-    cp5.addCallback(cl);
+    control.addCallback(cl);
   }
 }
