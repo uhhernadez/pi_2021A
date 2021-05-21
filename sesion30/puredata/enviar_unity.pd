@@ -1,0 +1,17 @@
+#N canvas 908 412 449 430 12;
+#X obj 114 172 udpsend;
+#X msg 28 42 connect localhost 11000;
+#X obj 114 213 print;
+#X obj 207 134 packOSC;
+#X msg 114 98 disconnect;
+#X obj 209 41 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 11300 1;
+#X obj 207 62 f;
+#X msg 207 98 send /unity/dato \$1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;

@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/extOSC/Examples/01) Getting Started/Getting Started.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
