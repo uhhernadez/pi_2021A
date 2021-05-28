@@ -1,0 +1,66 @@
+#N canvas 441 179 646 487 12;
+#X obj 98 42 rfft~;
+#X obj 72 80 *~;
+#X obj 142 80 *~;
+#X obj 103 113 +~;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array espectro 32 float 3;
+#A 0 0.00609589 0.00337961 0.00103417 0.00048777 0.000716542 0.000677954
+0.000125094 0.000101559 9.69063e-005 0.000125366 0.00039143 0.00020068
+0.000466529 0.00014638 0.000184628 0.000129986 0.000140453 0.000107846
+0.000202349 0.000166646 0.000157297 5.17823e-005 7.80666e-005 6.40328e-005
+4.41447e-005 4.9533e-005 5.65916e-005 4.54115e-005 6.10484e-005 5.85821e-005
+5.7782e-005 4.3981e-005;
+#X coords 0 1 32 0 200 140 1 0 0;
+#X restore 240 16 graph;
+#X obj 103 149 sqrt~;
+#X obj 103 215 tabwrite~ espectro;
+#X obj 8 168 metro 200;
+#X obj 8 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 98 11 adc~;
+#X obj 269 432 udpsend;
+#X obj 80 402 packOSC;
+#X obj 269 473 print;
+#X msg 266 366 connect localhost 10000;
+#X msg 268 399 disconnect;
+#X obj 300 295 tabread espectro;
+#X floatatom 297 326 5 0 0 0 - - -;
+#X obj 301 203 + 1;
+#X obj 301 178 f;
+#X obj 300 229 mod 32;
+#X floatatom 301 259 5 0 0 0 - - -;
+#X obj 391 179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 39 321 pack f f;
+#X obj 391 206 metro 1;
+#X msg 35 366 send /puredata/dato \$1 \$2;
+#X obj 103 181 /~ 32;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 0 1 2 0;
+#X connect 0 1 2 1;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 5 0 25 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 9 0 0 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 13 0 10 0;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 0 22 1;
+#X connect 17 0 18 1;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 20 0 15 0;
+#X connect 20 0 22 0;
+#X connect 21 0 23 0;
+#X connect 22 0 24 0;
+#X connect 23 0 18 0;
+#X connect 24 0 11 0;
+#X connect 25 0 6 0;
